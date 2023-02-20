@@ -52,10 +52,17 @@ class Auto():
         
 
     def verificarRegistro(self):
-        if self.registro == self.motor.registro and self.registro == self.aientos.registro:
-            return "Auto original"
-        else:
-            return "Las piezas no son originales"
+        for asiento in self.asientos:
+            if asiento != None:
+                if asiento.registro != self.registro:
+                    return "Las piezas no son originales"
+
+        if self.motor.registro != self.registro:
+            return "las piezas no son originales"
+        
+        return "Auto original"
+
+
 
 
         
