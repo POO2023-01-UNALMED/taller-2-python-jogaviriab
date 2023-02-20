@@ -37,8 +37,9 @@ class Auto():
     
     def cantidadAsientos(self):
         cantidad = 0
-        for asi in self.asientos:
-            cantidad +=1
+        for asiento in self.asientos:
+            if isinstance(asiento, Asiento):
+                cantidad +=1
         return cantidad
 
         
