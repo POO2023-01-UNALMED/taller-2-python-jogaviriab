@@ -34,14 +34,14 @@ class Motor():
 
 
 class Auto():
-    def __init__(self, modelo,precio,asientos,marca,motor,registro,cantidadCreados):
+    cantidadCreados = 0
+    def __init__(self, modelo,precio,asientos,marca,motor,registro):
         self.modelo = modelo
         self.precio = precio
         self.asientos = asientos
         self.marca = marca
         self.motor = motor
         self.registro = registro
-        self.cantidadCreados = cantidadCreados
     
     def cantidadAsientos(self):
         cantidad = 0
@@ -53,9 +53,9 @@ class Auto():
 
     def verificarRegistro(self):
         if self.registro == self.motor.registro and self.registro == self.aientos.registro:
-            print("Auto original")
+            return "Auto original"
         else:
-            print("Las piezas no son originales")
+            return "Las piezas no son originales"
 
 
         
