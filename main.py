@@ -51,7 +51,7 @@ class Auto():
 
         
 
-    def verificarRegistro(self):
+    def verificarIntegridad(self):
         for asiento in self.asientos:
             if asiento != None:
                 if asiento.registro != self.registro:
