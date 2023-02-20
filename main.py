@@ -44,7 +44,10 @@ class Auto():
         self.cantidadCreados = cantidadCreados
     
     def cantidadAsientos(self):
-        print(len(self.asientos))
+        cantidad = 0
+        for asi in self.asientos:
+            cantidad +=1
+        return cantidad
 
         
 
